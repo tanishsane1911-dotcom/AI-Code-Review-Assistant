@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Review Code | AI Code Review Assistant</title>
+    <link rel="icon" type="image/svg+xml" href="assets/brand-logo.svg">
+    <link rel="apple-touch-icon" href="assets/brand-logo.svg">
+
+    <meta name="description"
+        content="AI Code Review Assistant - Review Your Code Instantly">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/review.css">
+    <link rel="stylesheet" href="css/app-shell.css">
+
+</head>
+
+<body>
+
+    <!--======================================
+                SIDEBAR
+    =======================================-->
+
+    <aside class="sidebar">
+
+        <a href="dashboard.html" class="logo">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>AI Code Review Assistant</span>
+
+        </a>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="review.html">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Review Code</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="report.html">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>Reports</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="history.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>History</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html" class="logout-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!--======================================
+                MAIN CONTENT
+    =======================================-->
+
+    <main class="main-content">
+
+        <!--==================================
+                TOP NAVBAR
+        ===================================-->
+
+        <header class="top-navbar">
+
+            <div class="page-title">
+
+                <h1>Review Code</h1>
+
+                <p>Analyze your source code using AI.</p>
+
+            </div>
+
+            <div class="top-right">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text"
+                        placeholder="Search...">
+
+                </div>
+
+                <button class="notification">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </button>
+
+                <div class="profile-box">
+
+                    <img src="assets/user-avatar.svg" alt="User">
+
+                    <div>
+
+                        <h4>Account</h4>
+
+                        <span>User</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!--==================================
+                REVIEW CONTAINER
+        ===================================-->
+
+        <section class="review-container">
+                    <!--======================================
+                REVIEW FORM
+        =======================================-->
+
+        <div class="review-card">
+
+            <div class="card-header">
+
+                <h2>AI Code Analyzer</h2>
+
+                <p>
+                    Upload your source code or paste it below to get an
+                    AI-powered code review.
+                </p>
+
+            </div>
+
+            <form class="review-form">
+
+                <!-- Programming Language -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        <i class="fa-solid fa-code"></i>
+
+                        Programming Language
+
+                    </label>
+
+                    <select>
+
+                        <option>Select Language</option>
+
+                        <option>HTML</option>
+
+                        <option>CSS</option>
+
+                        <option>JavaScript</option>
+
+                        <option>PHP</option>
+
+                        <option>Python</option>
+
+                        <option>Java</option>
+
+                        <option>C</option>
+
+                        <option>C++</option>
+
+                        <option>C#</option>
+
+                        <option>React</option>
+
+                        <option>Node.js</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Upload Code -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        <i class="fa-solid fa-file-arrow-up"></i>
+
+                        Upload Source Code
+
+                    </label>
+
+                    <input type="file">
+
+                </div>
+
+                <!-- Code Editor -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        <i class="fa-solid fa-laptop-code"></i>
+
+                        Paste Your Code
+
+                    </label>
+
+                    <textarea
+                        rows="18"
+                        placeholder="Paste your source code here..."></textarea>
+
+                </div>
+
+                <!-- Buttons -->
+
+                <div class="button-group">
+
+                    <button type="submit" class="review-btn">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                        Review Code
+
+                    </button>
+
+                    <button type="reset" class="clear-btn">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                        Clear
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <!--======================================
+                AI REVIEW RESULTS
+        =======================================-->
+
+        <section class="results-section">
+
+            <div class="section-title">
+
+                <h2>AI Review Results</h2>
+
+                <p>Your AI-generated code analysis will appear below.</p>
+
+            </div>
+
+            <div class="results-grid">
+
+                <!-- Overall Score -->
+
+                <div class="result-card">
+
+                    <div class="result-icon">
+
+                        <i class="fa-solid fa-award"></i>
+
+                    </div>
+
+                    <h3>Overall Score</h3>
+
+                    <h1>95%</h1>
+
+                    <span class="excellent">Excellent Code Quality</span>
+
+                </div>
+
+                <!-- Bugs -->
+
+                <div class="result-card">
+
+                    <div class="result-icon">
+
+                        <i class="fa-solid fa-bug"></i>
+
+                    </div>
+
+                    <h3>Bugs Found</h3>
+
+                    <h1>2</h1>
+
+                    <span class="warning">Minor Issues</span>
+
+                </div>
+
+                <!-- Security -->
+
+                <div class="result-card">
+
+                    <div class="result-icon">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+                    <h3>Security Score</h3>
+
+                    <h1>98%</h1>
+
+                    <span class="safe">Secure</span>
+
+                </div>
+
+                <!-- Performance -->
+
+                <div class="result-card">
+
+                    <div class="result-icon">
+
+                        <i class="fa-solid fa-gauge-high"></i>
+
+                    </div>
+
+                    <h3>Performance</h3>
+
+                    <h1>92%</h1>
+
+                    <span class="good">Optimized</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!--======================================
+                AI SUGGESTIONS
+        =======================================-->
+
+        <section class="suggestion-section">
+
+            <div class="section-title">
+
+                <h2>AI Suggestions</h2>
+
+                <p>Recommended improvements for your code.</p>
+
+            </div>
+
+            <div class="suggestion-list">
+
+                <div class="suggestion-item">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div>
+
+                        <h4>Use Meaningful Variable Names</h4>
+
+                        <p>Rename short variable names to improve readability.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="suggestion-item">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div>
+
+                        <h4>Improve Error Handling</h4>
+
+                        <p>Add try-catch blocks or proper validation.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="suggestion-item">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div>
+
+                        <h4>Remove Duplicate Code</h4>
+
+                        <p>Refactor repeated logic into reusable functions.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="suggestion-item">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div>
+
+                        <h4>Optimize Performance</h4>
+
+                        <p>Reduce unnecessary loops and database calls.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="corrected-code-section" hidden>
+            <div class="section-title">
+                <h2>Corrected Code</h2>
+                <p class="corrected-code-status" aria-live="polite"></p>
+            </div>
+            <div class="corrected-code-panel" hidden>
+                <div class="corrected-code-toolbar">
+                    <div class="corrected-code-language"></div>
+                    <button type="button" class="copy-corrected-code-btn" hidden>
+                        <i class="fa-solid fa-copy" aria-hidden="true"></i>
+                        Copy Corrected Code
+                    </button>
+                </div>
+                <pre><code></code></pre>
+            </div>
+        </section>
+
+        <!--======================================
+                DOWNLOAD REPORT
+        =======================================-->
+
+        <section class="download-report">
+
+            <div class="download-card">
+
+                <h2>Download Review Report</h2>
+
+                <p>
+
+                    Save your AI code review report as a PDF for future reference.
+
+                </p>
+
+                <button class="download-btn">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download Report
+
+                </button>
+
+            </div>
+
+        </section>
+                <!--======================================
+                FOOTER
+        =======================================-->
+
+        <footer class="review-footer">
+
+            <div class="footer-content">
+
+                <div class="footer-left">
+
+                    <h3>AI Code Review Assistant</h3>
+
+                    <p>
+                        Professional AI-powered platform for code quality,
+                        security analysis, performance optimization,
+                        and best practice recommendations.
+                    </p>
+
+                </div>
+
+                <div class="footer-right">
+
+                    <p>
+
+                        © 2026 AI Code Review Assistant.
+
+                        All Rights Reserved.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+    <!--======================================
+            JAVASCRIPT
+    =======================================-->
+
+    <script src="js/api.js"></script>
+    <script src="js/app-shell.js"></script>
+    <script src="js/review.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">AI Code Review Assistant logo</title>
+  <desc id="desc">A code bracket shield mark for AI Code Review Assistant.</desc>
+  <defs>
+    <linearGradient id="brandGradient" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2dd4bf"/>
+      <stop offset=".52" stop-color="#6d5dfc"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+    <filter id="softShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#111827" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#070b16"/>
+  <path d="M32 8 52 16.5v13.2c0 12.8-7.6 21.6-20 26.3-12.4-4.7-20-13.5-20-26.3V16.5L32 8Z" fill="url(#brandGradient)" filter="url(#softShadow)"/>
+  <path d="M25.8 24.2 18.5 32l7.3 7.8" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M38.2 24.2 45.5 32l-7.3 7.8" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M34.4 22.2 29.6 41.8" fill="none" stroke="#dffcff" stroke-width="4" stroke-linecap="round"/>
+</svg>

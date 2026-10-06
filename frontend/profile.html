@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | AI Code Review Assistant</title>
+    <link rel="icon" type="image/svg+xml" href="assets/brand-logo.svg">
+    <link rel="apple-touch-icon" href="assets/brand-logo.svg">
+
+    <meta name="description"
+        content="AI Code Review Assistant - Manage Your Profile Settings">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/app-shell.css">
+
+</head>
+
+<body>
+
+    <!--======================================
+                SIDEBAR
+    =======================================-->
+
+    <aside class="sidebar">
+
+        <a href="dashboard.html" class="logo">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>AI Code Review Assistant</span>
+
+        </a>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="review.html">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Review Code</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="report.html">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>Reports</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="history.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>History</span>
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html" class="logout-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!--======================================
+                MAIN CONTENT
+    =======================================-->
+
+    <main class="main-content">
+
+        <!--==================================
+                TOP NAVBAR
+        ===================================-->
+
+        <header class="top-navbar">
+
+            <div class="page-title">
+
+                <h1>My Profile</h1>
+
+                <p>Manage your account settings and preferences.</p>
+
+            </div>
+
+            <div class="top-right">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text"
+                        placeholder="Search...">
+
+                </div>
+
+                <button class="notification">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </button>
+
+                <div class="profile-box">
+
+                    <img src="assets/user-avatar.svg" alt="User">
+
+                    <div>
+
+                        <h4>Loading…</h4>
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!--==================================
+                PROFILE HEADER
+        ===================================-->
+
+        <section class="profile-header">
+
+            <div class="profile-cover">
+
+                <div class="cover-overlay"></div>
+
+            </div>
+
+            <div class="profile-info">
+
+                <div class="profile-avatar">
+
+                    <img src="assets/user-avatar.svg" alt="Profile Picture">
+
+                    <button class="edit-avatar-btn">
+
+                        <i class="fa-solid fa-camera"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="profile-details">
+
+                    <h2 id="profile-name">Loading profile…</h2>
+
+                    <p class="profile-role" id="profile-username"></p>
+
+                    <p class="profile-summary">Your account details are securely loaded from your saved profile.</p>
+
+                    <div class="profile-meta">
+
+                        <span class="meta-item">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Profile information
+
+                        </span>
+
+                        <span class="meta-item">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <span id="profile-email">Loading…</span>
+
+                        </span>
+
+                        <span class="meta-item">
+
+                            <i class="fa-solid fa-calendar"></i>
+
+                            <span id="profile-created-at">Loading…</span>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="profile-actions">
+
+                    <button class="action-btn primary-btn">
+
+                        <i class="fa-solid fa-pen-to-square"></i>
+
+                        Edit Profile
+
+                    </button>
+
+                    <button class="action-btn secondary-btn">
+
+                        <i class="fa-solid fa-share-nodes"></i>
+
+                        Share Profile
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="profile-quick-panel">
+
+                <div class="quick-item">
+                    <span>Workspace</span>
+                    <strong id="profile-workspace">@—</strong>
+                </div>
+
+                <div class="quick-item">
+                    <span>Plan</span>
+                    <strong id="profile-reviews-count">— reviews</strong>
+                </div>
+
+                <div class="quick-item">
+                    <span>Last Review</span>
+                    <strong id="profile-last-review">No reviews yet</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--==================================
+                PROFILE STATS
+        ===================================-->
+
+        <section class="profile-stats">
+
+            <div class="stats-container">
+
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+
+                        <i class="fa-solid fa-code"></i>
+
+                    </div>
+
+                    <div class="stat-content">
+
+                        <h3>—</h3>
+
+                        <p>Code Reviews</p>
+
+                    </div>
+
+                </div>
+
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <div class="stat-content">
+
+                        <h3>—</h3>
+
+                        <p>Avg. Score</p>
+
+                    </div>
+
+                </div>
+
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+
+                        <i class="fa-solid fa-trophy"></i>
+
+                    </div>
+
+                    <div class="stat-content">
+
+                        <h3>—</h3>
+
+                        <p>Reports</p>
+
+                    </div>
+
+                </div>
+
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+                    <div class="stat-content">
+
+                        <h3>—</h3>
+
+                        <p>Security</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--==================================
+                PROFILE CONTENT
+        ===================================-->
+
+        <section class="profile-content">
+
+            <div class="content-grid">
+
+                <!-- About Section -->
+
+                <div class="content-card about-card profile-unavailable">
+
+                    <div class="card-header">
+
+                        <h3>
+
+                            <i class="fa-solid fa-user"></i>
+
+                            About Me
+
+                        </h3>
+
+                        <button class="edit-btn">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <p>No additional biography details have been saved for this account.</p>
+
+                        <div class="info-list">
+
+                            <div class="info-item">
+
+                                <span class="info-label">
+
+                                    <i class="fa-solid fa-briefcase"></i>
+
+                                    Experience
+
+                                </span>
+
+                                <span class="info-value">5+ Years</span>
+
+                            </div>
+
+                            <div class="info-item">
+
+                                <span class="info-label">
+
+                                    <i class="fa-solid fa-building"></i>
+
+                                    Company
+
+                                </span>
+
+                                <span class="info-value">Tech Solutions Inc.</span>
+
+                            </div>
+
+                            <div class="info-item">
+
+                                <span class="info-label">
+
+                                    <i class="fa-solid fa-location-dot"></i>
+
+                                    Location
+
+                                </span>
+
+                                <span class="info-value">Mumbai, India</span>
+
+                            </div>
+
+                            <div class="info-item">
+
+                                <span class="info-label">
+
+                                    <i class="fa-solid fa-globe"></i>
+
+                                    Website
+
+                                </span>
+
+                                <span class="info-value">www.tanish.dev</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Skills Section -->
+
+                <div class="content-card skills-card profile-unavailable">
+
+                    <div class="card-header">
+
+                        <h3>
+
+                            <i class="fa-solid fa-lightbulb"></i>
+
+                            Skills & Expertise
+
+                        </h3>
+
+                        <button class="edit-btn">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="skills-list">
+
+                            <div class="skill-item">
+
+                                <div class="skill-info">
+
+                                    <span class="skill-name">JavaScript</span>
+
+                                    <span class="skill-percentage">95%</span>
+
+                                </div>
+
+                                <div class="skill-bar">
+
+                                    <div class="skill-progress" style="width: 95%"></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="skill-item">
+
+                                <div class="skill-info">
+
+                                    <span class="skill-name">React</span>
+
+                                    <span class="skill-percentage">92%</span>
+
+                                </div>
+
+                                <div class="skill-bar">
+
+                                    <div class="skill-progress" style="width: 92%"></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="skill-item">
+
+                                <div class="skill-info">
+
+                                    <span class="skill-name">Node.js</span>
+
+                                    <span class="skill-percentage">88%</span>
+
+                                </div>
+
+                                <div class="skill-bar">
+
+                                    <div class="skill-progress" style="width: 88%"></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="skill-item">
+
+                                <div class="skill-info">
+
+                                    <span class="skill-name">Python</span>
+
+                                    <span class="skill-percentage">85%</span>
+
+                                </div>
+
+                                <div class="skill-bar">
+
+                                    <div class="skill-progress" style="width: 85%"></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="skill-item">
+
+                                <div class="skill-info">
+
+                                    <span class="skill-name">CSS/Sass</span>
+
+                                    <span class="skill-percentage">90%</span>
+
+                                </div>
+
+                                <div class="skill-bar">
+
+                                    <div class="skill-progress" style="width: 90%"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Recent Activity Section -->
+
+                <div class="content-card activity-card">
+
+                    <div class="card-header">
+
+                        <h3>
+
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+
+                            Recent Activity
+
+                        </h3>
+
+                        <a href="history.html" class="view-all-link">
+
+                            View All
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="activity-list">
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon">
+
+                                    <i class="fa-solid fa-code"></i>
+
+                                </div>
+
+                                <div class="activity-content">
+
+                                    <h4>Reviewed E-commerce Platform</h4>
+
+                                    <p>Score: 95% • 2 hours ago</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon">
+
+                                    <i class="fa-solid fa-file-lines"></i>
+
+                                </div>
+
+                                <div class="activity-content">
+
+                                    <h4>Generated API Report</h4>
+
+                                    <p>Score: 88% • 5 hours ago</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon">
+
+                                    <i class="fa-solid fa-download"></i>
+
+                                </div>
+
+                                <div class="activity-content">
+
+                                    <h4>Downloaded Mobile App Report</h4>
+
+                                    <p>Score: 92% • 1 day ago</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Achievements Section -->
+
+                <div class="content-card achievements-card profile-unavailable">
+
+                    <div class="card-header">
+
+                        <h3>
+
+                            <i class="fa-solid fa-trophy"></i>
+
+                            Achievements
+
+                        </h3>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="achievements-grid">
+
+                            <div class="achievement-item">
+
+                                <div class="achievement-icon earned">
+
+                                    <i class="fa-solid fa-medal"></i>
+
+                                </div>
+
+                                <div class="achievement-info">
+
+                                    <h4>Code Master</h4>
+
+                                    <p>100+ reviews completed</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="achievement-item">
+
+                                <div class="achievement-icon earned">
+
+                                    <i class="fa-solid fa-shield-halved"></i>
+
+                                </div>
+
+                                <div class="achievement-info">
+
+                                    <h4>Security Expert</h4>
+
+                                    <p>95%+ security score</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="achievement-item">
+
+                                <div class="achievement-icon earned">
+
+                                    <i class="fa-solid fa-bolt"></i>
+
+                                </div>
+
+                                <div class="achievement-info">
+
+                                    <h4>Speed Demon</h4>
+
+                                    <p>Fast reviewer badge</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="achievement-item">
+
+                                <div class="achievement-icon locked">
+
+                                    <i class="fa-solid fa-crown"></i>
+
+                                </div>
+
+                                <div class="achievement-info">
+
+                                    <h4>Perfect Score</h4>
+
+                                    <p>100% overall score</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--======================================
+                FOOTER
+        =======================================-->
+
+        <footer class="profile-footer">
+
+            <div class="footer-content">
+
+                <div class="footer-left">
+
+                    <h3>AI Code Review Assistant</h3>
+
+                    <p>
+                        Professional AI-powered platform for code quality,
+                        security analysis, performance optimization,
+                        and best practice recommendations.
+                    </p>
+
+                </div>
+
+                <div class="footer-right">
+
+                    <p>
+
+                        © 2026 AI Code Review Assistant.
+
+                        
+                    </p>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+    <!--======================================
+            JAVASCRIPT
+    =======================================-->
+
+    <script src="js/api.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/app-shell.js"></script>
+
+</body>
+
+</html>

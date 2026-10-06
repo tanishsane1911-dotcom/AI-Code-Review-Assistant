@@ -1,0 +1,273 @@
+/*=========================================
+            GLOBAL TRANSITIONS
+=========================================*/
+
+*{
+
+    transition:0.3s ease;
+
+}
+
+/*=========================================
+            FADE IN
+=========================================*/
+
+.fade-in{
+
+    animation:fadeIn 1s ease forwards;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+            SLIDE LEFT
+=========================================*/
+
+.slide-left{
+
+    animation:slideLeft 1s ease forwards;
+
+}
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/*=========================================
+            SLIDE RIGHT
+=========================================*/
+
+.slide-right{
+
+    animation:slideRight 1s ease forwards;
+
+}
+
+@keyframes slideRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/*=========================================
+            FLOAT
+=========================================*/
+
+.float{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+            ZOOM IN
+=========================================*/
+
+.zoom{
+
+    animation:zoomIn .8s ease;
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*=========================================
+            ROTATE ICON
+=========================================*/
+
+.feature-card:hover i,
+
+.tech-card:hover i{
+
+    transform:rotate(360deg);
+
+}
+
+/*=========================================
+            GLOW EFFECT
+=========================================*/
+
+.glow{
+
+    animation:glow 2s infinite alternate;
+
+}
+
+@keyframes glow{
+
+    from{
+
+        box-shadow:0 0 15px rgba(108,99,255,.3);
+
+    }
+
+    to{
+
+        box-shadow:0 0 35px rgba(108,99,255,.7);
+
+    }
+
+}
+
+/*=========================================
+            BUTTON EFFECT
+=========================================*/
+
+.btn-primary:hover,
+
+.btn-signup:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+}
+
+/*=========================================
+            CARD HOVER
+=========================================*/
+
+.feature-card:hover,
+
+.tech-card:hover,
+
+.step-card:hover,
+
+.stat-box:hover,
+
+.testimonial-card:hover,
+
+.mini-card:hover{
+
+    box-shadow:0 20px 45px rgba(108,99,255,.25);
+
+}
+
+/*=========================================
+            IMAGE ANIMATION
+=========================================*/
+
+.hero-image{
+
+    animation:heroFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes heroFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-20px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+            SCROLLBAR SMOOTH
+=========================================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}

@@ -1,0 +1,806 @@
+/* ===========================================
+   GOOGLE FONTS
+=========================================== */
+/*=========================================
+        GOOGLE FONTS
+=========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+}
+
+:root{
+
+    /* Colors */
+
+    --primary:#6C63FF;
+    --secondary:#8B5CF6;
+    --accent:#38BDF8;
+
+    --background:#050816;
+    --card:#111827;
+    --card-light:#1F2937;
+
+    --white:#FFFFFF;
+    --text:#E5E7EB;
+    --paragraph:#94A3B8;
+
+    --success:#10B981;
+    --warning:#F59E0B;
+    --danger:#EF4444;
+
+    --border:rgba(255,255,255,.08);
+
+    /* Fonts */
+
+    --heading:'Poppins',sans-serif;
+    --body:'Inter',sans-serif;
+
+    /* Shadow */
+
+    --shadow:0 10px 35px rgba(0,0,0,.35);
+
+    /* Radius */
+
+    --radius:16px;
+
+    /* Transition */
+
+    --transition:.35s ease;
+
+}
+
+
+/* ===========================================
+   RESET
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--background);
+
+    color:var(--text);
+
+    font-family:var(--body);
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+
+/* ===========================================
+   COMMON
+=========================================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+section{
+
+    padding:100px 8%;
+
+}
+
+.container{
+
+    width:100%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+
+/* ===========================================
+   HEADINGS
+=========================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+font-family:'Poppins',sans-serif;
+
+font-weight:600;
+
+}
+
+h1{
+
+    font-size:64px;
+
+    line-height:1.2;
+
+}
+
+h2{
+
+    font-size:42px;
+
+}
+
+h3{
+
+    font-size:24px;
+    margin-bottom: 12px;
+    margin-top: 0;
+
+}
+
+p{
+
+    color:var(--paragraph);
+
+    font-size:16px;
+
+}
+
+
+/* ===========================================
+   SECTION TITLE
+=========================================== */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title span{
+
+    display:inline-block;
+
+    color:var(--accent);
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+}
+
+.section-title h2{
+
+    margin-bottom:15px;
+
+}
+
+.section-title p{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+
+.btn-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:linear-gradient(135deg,#6C63FF,#8B5CF6);
+
+    color:#fff;
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 25px rgba(108,99,255,.35);
+
+}
+
+.btn-secondary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    border:1px solid var(--border);
+
+    color:var(--white);
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    transition:var(--transition);
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--card);
+
+}
+
+
+/* ===========================================
+   CARD
+=========================================== */
+
+.card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/* ===========================================
+   CUSTOM SCROLLBAR
+=========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#050816;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#6C63FF;
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#8B5CF6;
+
+}
+
+
+/* ===========================================
+    SELECTION
+=========================================== */
+
+::selection{
+
+    background:#6C63FF;
+
+    color:#fff;
+
+}
+
+/* ===========================================
+    ANIMATIONS
+=========================================== */
+
+@keyframes fadeInUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeInLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes fadeInRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes scaleIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(0.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* Apply animations to sections */
+
+.hero-content{
+
+    animation:fadeInLeft 1s ease;
+
+}
+
+.hero-image{
+
+    animation:fadeInRight 1s ease;
+
+}
+
+.feature-card{
+
+    animation:fadeInUp 0.8s ease backwards;
+
+}
+
+.feature-card:nth-child(1){
+
+    animation-delay:0.1s;
+
+}
+
+.feature-card:nth-child(2){
+
+    animation-delay:0.2s;
+
+}
+
+.feature-card:nth-child(3){
+
+    animation-delay:0.3s;
+
+}
+
+.feature-card:nth-child(4){
+
+    animation-delay:0.4s;
+
+}
+
+.workflow-card{
+
+    animation:fadeInUp 0.8s ease backwards;
+
+}
+
+.workflow-card:nth-child(1){
+
+    animation-delay:0.1s;
+
+}
+
+.workflow-card:nth-child(2){
+
+    animation-delay:0.2s;
+
+}
+
+.workflow-card:nth-child(3){
+
+    animation-delay:0.3s;
+
+}
+
+.workflow-card:nth-child(4){
+
+    animation-delay:0.4s;
+
+}
+
+/* ===========================================
+    SCROLL ANIMATIONS
+=========================================== */
+
+.scroll-reveal{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:all 0.8s ease;
+
+}
+
+.scroll-reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ===========================================
+    GLOW EFFECTS
+=========================================== */
+
+.glow{
+
+    position:relative;
+
+}
+
+.glow::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%, -50%);
+
+    width:100%;
+
+    height:100%;
+
+    background:radial-gradient(circle, rgba(108,99,255,.3) 0%, transparent 70%);
+
+    filter:blur(40px);
+
+    z-index:-1;
+
+    opacity:0;
+
+    transition:opacity 0.5s ease;
+
+}
+
+.glow:hover::before{
+
+    opacity:1;
+
+}
+
+/* ===========================================
+    GRADIENT BORDERS
+=========================================== */
+
+.gradient-border{
+
+    position:relative;
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+}
+
+.gradient-border::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-2px;
+
+    left:-2px;
+
+    right:-2px;
+
+    bottom:-2px;
+
+    background:linear-gradient(135deg, var(--primary), var(--accent));
+
+    border-radius:calc(var(--radius) + 2px);
+
+    z-index:-1;
+
+    opacity:0;
+
+    transition:opacity 0.35s ease;
+
+}
+
+.gradient-border:hover::before{
+
+    opacity:1;
+
+}
+
+/* ===========================================
+    TEXT GRADIENTS
+=========================================== */
+
+.text-gradient{
+
+    background:linear-gradient(135deg, #6C63FF, #38BDF8);
+
+    background-clip:text;
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+/* ===========================================
+    LOADING SKELETON
+=========================================== */
+
+@keyframes skeleton{
+
+    0%{
+
+        background-position:-200% 0;
+
+    }
+
+    100%{
+
+        background-position:200% 0;
+
+    }
+
+}
+
+.skeleton{
+
+    background:linear-gradient(90deg, var(--card) 25%, var(--card-light) 50%, var(--card) 75%);
+
+    background-size:200% 100%;
+
+    animation:skeleton 1.5s infinite;
+
+}
+
+/* ===========================================
+    SECTION STABILITY
+=========================================== */
+
+section{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Ensure all cards have consistent styling */
+
+.feature-card,
+.workflow-card,
+.stat-box,
+.testimonial-card{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* Smooth transitions for all interactive elements */
+
+a, button, .btn-primary, .btn-secondary{
+
+    transition:all 0.3s ease;
+
+}
+
+/* Ensure proper stacking context */
+
+.hero{
+
+    z-index:1;
+
+}
+
+.header{
+
+    z-index:1000;
+
+}
+
+/* Prevent layout shifts */
+
+*{
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+/* Ensure images and icons are stable */
+
+i, .fa-solid, .fa-brands{
+
+    display:inline-block;
+
+    vertical-align:middle;
+
+}
+
+/* Container stability */
+
+.container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+.container{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    width:100%;
+
+}
+
+section{
+
+    padding:100px 8%;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title span{
+
+    color:var(--primary);
+
+    font-size:18px;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+}
+
+.section-title h2{
+
+    font-size:42px;
+
+    margin:15px 0;
+
+}
+
+.section-title p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:var(--paragraph);
+
+    line-height:1.8;
+
+}

@@ -1,0 +1,265 @@
+/*=========================================
+            FOOTER
+==========================================*/
+
+footer{
+
+    background:linear-gradient(180deg, #0a0a1a 0%, #050816 100%);
+
+    border-top:1px solid rgba(108,99,255,.15);
+
+    padding:80px 8% 25px;
+
+    position:relative;
+
+}
+
+footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:80%;
+
+    height:1px;
+
+    background:linear-gradient(90deg, transparent, rgba(108,99,255,.3), transparent);
+
+}
+
+.footer-container{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:50px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*=========================================
+        FOOTER ABOUT
+==========================================*/
+
+.footer-about h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#fff;
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.footer-about i{
+
+    color:#ffcf48;
+
+    filter:drop-shadow(0 0 8px rgba(108,99,255,.6));
+
+}
+
+.footer-about p{
+
+    line-height:1.8;
+
+    color:var(--paragraph);
+
+    max-width:320px;
+
+    font-size:15px;
+
+}
+
+/*=========================================
+        FOOTER LINKS
+==========================================*/
+
+.footer-links h3,
+
+.footer-social h3{
+
+    color:#fff;
+
+    margin-bottom:25px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    position:relative;
+
+    padding-bottom:12px;
+
+}
+
+.footer-links h3::after,
+
+.footer-social h3::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    width:40px;
+
+    height:2px;
+
+    background:linear-gradient(90deg, var(--primary), var(--accent));
+
+    border-radius:2px;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.footer-links a{
+
+    color:var(--paragraph);
+
+    margin-bottom:12px;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+.footer-links a:hover{
+
+    color:var(--primary);
+
+    transform:translateX(8px);
+
+}
+
+/*=========================================
+        SOCIAL ICONS
+==========================================*/
+
+.footer-social{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.footer-social a{
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+    border-radius:50%;
+
+    background:var(--card);
+
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
+
+}
+
+.footer-social a:hover{
+
+    background:linear-gradient(135deg,#6C63FF,#38BDF8);
+
+    transform:translateY(-6px);
+
+    box-shadow:0 8px 25px rgba(108,99,255,.4);
+
+    border-color:rgba(108,99,255,.3);
+
+}
+
+/*=========================================
+        FOOTER BOTTOM
+==========================================*/
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    margin-top:60px;
+
+    padding-top:25px;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.footer-bottom p{
+
+    color:var(--paragraph);
+
+    font-size:15px;
+
+}
+
+.footer-bottom a{
+
+    color:var(--primary);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.footer-bottom a:hover{
+
+    color:var(--accent);
+
+}

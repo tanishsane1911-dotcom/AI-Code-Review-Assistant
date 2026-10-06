@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | AI Code Review Assistant</title>
+    <link rel="icon" type="image/svg+xml" href="assets/brand-logo.svg">
+    <link rel="apple-touch-icon" href="assets/brand-logo.svg">
+
+    <meta name="description"
+        content="Professional AI Code Review Assistant Dashboard">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/app-shell.css">
+
+</head>
+
+<body>
+
+    <!--======================================
+                DASHBOARD
+    =======================================-->
+
+    <div class="dashboard">
+
+        <!--======================================
+                    SIDEBAR
+        =======================================-->
+
+        <aside class="sidebar">
+
+            <!-- Logo -->
+
+            <a href="dashboard.html" class="logo">
+
+                <i class="fa-solid fa-code"></i>
+
+                <div class="logo-text">
+
+                    <h2>AI Code Review</h2>
+
+                  </div>
+
+            </a>
+
+            <!-- Navigation -->
+
+            <nav class="sidebar-menu">
+
+                <ul>
+
+                    <li class="active">
+                        <a href="dashboard.html">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="review.html">
+                            <i class="fa-solid fa-code"></i>
+                            <span>New Review</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="report.html">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="history.html">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <span>History</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="profile.html">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="settings.html">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html" class="logout-link">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- User Card -->
+
+            <div class="sidebar-bottom">
+
+                <div class="user-card">
+
+                    <img src="assets/user-avatar.svg"
+                        alt="Profile">
+
+                    <div>
+
+                        <h4>Loading…</h4>
+
+                        <p>Account</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+        <!--======================================
+                MAIN CONTENT START
+        =======================================-->
+
+        <main class="main-content">
+            <!--======================================
+            TOP NAVBAR
+=======================================-->
+
+<header class="top-navbar">
+
+    <div class="nav-left">
+
+        <div class="search-bar">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="search" aria-label="Search dashboard reviews" placeholder="Search reviews by title or language...">
+
+        </div>
+
+    </div>
+
+    <div class="nav-right">
+
+        <button type="button" class="notification" aria-label="Notifications">
+
+            <i class="fa-regular fa-bell"></i>
+
+            <span>3</span>
+
+        </button>
+
+        <div class="profile-box">
+
+            <img src="assets/user-avatar.svg"
+                alt="Profile">
+
+            <div>
+
+                <h4>Loading…</h4>
+
+                <p>Account</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!--======================================
+        DASHBOARD HEADER
+=======================================-->
+
+<section class="dashboard-header">
+
+    <div class="header-left">
+
+        <h1>Dashboard</h1>
+
+        <p>
+            Welcome back! Here's an overview of your AI Code Review Assistant.
+        </p>
+
+    </div>
+
+    <div class="header-right">
+
+        <a href="review.html" class="primary-btn">
+
+            <i class="fa-solid fa-plus"></i>
+
+            Start New Review
+
+        </a>
+
+    </div>
+
+</section>
+
+<!--======================================
+        WELCOME SECTION
+=======================================-->
+
+<section class="welcome-section">
+
+    <div class="welcome-content">
+
+        <h2>
+
+            Welcome to
+
+            <span style="color:#FFD54F;">
+                AI Code Review Assistant
+            </span>
+
+        </h2>
+
+        <p>
+
+            Analyze your source code instantly using Artificial Intelligence.
+
+            Detect bugs, improve code quality, enhance security,
+
+            optimize performance and receive detailed AI-generated reports.
+
+        </p>
+
+        <a href="review.html" class="primary-btn">
+
+            <i class="fa-solid fa-rocket"></i>
+
+            Review My Code
+
+        </a>
+
+    </div>
+
+    <div class="welcome-image">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png"
+            alt="AI Dashboard">
+
+    </div>
+
+</section>
+
+<!--======================================
+            STATISTICS
+=======================================-->
+
+<section class="stats">
+
+    <div class="stat-card">
+
+        <div class="stat-icon blue">
+
+            <i class="fa-solid fa-code"></i>
+
+        </div>
+
+        <div class="stat-info">
+
+            <h3>0</h3>
+
+            <p>Reviews Completed</p>
+
+        </div>
+
+    </div>
+
+    <div class="stat-card">
+
+        <div class="stat-icon green">
+
+            <i class="fa-solid fa-bug"></i>
+
+        </div>
+
+        <div class="stat-info">
+
+            <h3>0</h3>
+
+            <p>Bugs Detected</p>
+
+        </div>
+
+    </div>
+
+    <div class="stat-card">
+
+        <div class="stat-icon orange">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+        <div class="stat-info">
+
+            <h3>0%</h3>
+
+            <p>Security Score</p>
+
+        </div>
+
+    </div>
+
+    <div class="stat-card">
+
+        <div class="stat-icon purple">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+        </div>
+
+        <div class="stat-info">
+
+            <h3>0%</h3>
+
+            <p>Average Review Score</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--======================================
+        DASHBOARD GRID START
+=======================================-->
+
+<div class="dashboard-grid">
+    <!--======================================
+        RECENT REVIEWS
+=======================================-->
+
+<section class="recent-reviews">
+
+    <div class="section-header">
+
+        <h2>Recent Code Reviews</h2>
+
+        <a href="history.html" class="view-all">View All</a>
+
+    </div>
+
+    <table class="review-table">
+
+        <thead>
+
+            <tr>
+
+                <th>Project</th>
+
+                <th>Language</th>
+
+                <th>Score</th>
+
+                <th>Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Portfolio Website</td>
+
+                <td>HTML / CSS</td>
+
+                <td>96%</td>
+
+                <td><span class="badge success">Excellent</span></td>
+
+            </tr>
+
+            <tr>
+
+                <td>Student Portal</td>
+
+                <td>JavaScript</td>
+
+                <td>91%</td>
+
+                <td><span class="badge success">Good</span></td>
+
+            </tr>
+
+            <tr>
+
+                <td>E-Commerce API</td>
+
+                <td>PHP</td>
+
+                <td>82%</td>
+
+                <td><span class="badge warning">Needs Improvement</span></td>
+
+            </tr>
+
+            <tr>
+
+                <td>Python AI Project</td>
+
+                <td>Python</td>
+
+                <td>98%</td>
+
+                <td><span class="badge success">Excellent</span></td>
+
+            </tr>
+
+            <tr>
+
+                <td>Bank Management</td>
+
+                <td>Java</td>
+
+                <td>76%</td>
+
+                <td><span class="badge danger">Poor</span></td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<!--======================================
+        AI SCORE CARD
+=======================================-->
+
+<aside class="score-card">
+
+    <h2>Overall AI Score</h2>
+
+    <div class="score-circle">
+
+        <span>95%</span>
+
+    </div>
+
+    <p>
+
+        Your recent code quality is excellent.
+
+        Keep following secure coding practices.
+
+    </p>
+
+    <div class="analytics">
+
+        <div class="analytics-item">
+
+            <h4>Code Quality</h4>
+
+            <span>95%</span>
+
+        </div>
+
+        <div class="analytics-item">
+
+            <h4>Security</h4>
+
+            <span>92%</span>
+
+        </div>
+
+        <div class="analytics-item">
+
+            <h4>Performance</h4>
+
+            <span>89%</span>
+
+        </div>
+
+        <div class="analytics-item">
+
+            <h4>Maintainability</h4>
+
+            <span>0%</span>
+
+        </div>
+
+    </div>
+
+</aside>
+
+</div>
+
+<!--======================================
+        QUICK ACTIONS
+=======================================-->
+
+<section class="quick-actions">
+
+    <h2>Quick Actions</h2>
+
+    <div class="action-grid">
+
+        <a href="review.html" class="action-card">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h3>New Review</h3>
+
+            <p>Upload your source code and receive an AI-powered review instantly.</p>
+
+        </a>
+
+        <a href="report.html" class="action-card">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <h3>Reports</h3>
+
+            <p>View and download detailed review reports generated by AI.</p>
+
+        </a>
+
+        <a href="history.html" class="action-card">
+
+            <i class="fa-solid fa-clock-rotate-left"></i>
+
+            <h3>History</h3>
+
+            <p>Access all your previous code reviews in one place.</p>
+
+        </a>
+
+        <a href="profile.html" class="action-card">
+
+            <i class="fa-solid fa-user"></i>
+
+            <h3>Profile</h3>
+
+            <p>Manage your account details and personal information.</p>
+
+        </a>
+
+    </div>
+
+</section>
+<!--======================================
+        RECENT ACTIVITY
+=======================================-->
+
+<section class="activity-section">
+
+    <h2>Recent Activity</h2>
+
+    <div class="activity-list">
+
+        <div class="activity-item">
+
+            <div class="activity-icon success">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <div class="activity-content">
+                <h4>Portfolio Website Reviewed</h4>
+                <p>AI detected 12 issues and suggested improvements.</p>
+                <span>10 minutes ago</span>
+            </div>
+
+        </div>
+
+        <div class="activity-item">
+
+            <div class="activity-icon primary">
+                <i class="fa-solid fa-code"></i>
+            </div>
+
+            <div class="activity-content">
+                <h4>New PHP Project Uploaded</h4>
+                <p>Your project has been submitted for AI analysis.</p>
+                <span>45 minutes ago</span>
+            </div>
+
+        </div>
+
+        <div class="activity-item">
+
+            <div class="activity-icon warning">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+
+            <div class="activity-content">
+                <h4>Security Warning</h4>
+                <p>SQL Injection vulnerability detected in Login Module.</p>
+                <span>Today</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--======================================
+        PERFORMANCE SECTION
+=======================================-->
+
+<section class="performance-section">
+
+    <div class="performance-card">
+
+        <h2>Performance Analysis</h2>
+
+        <div class="progress-group">
+
+            <div class="progress-header">
+                <h4>Code Quality</h4>
+                <span>95%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill quality"></div>
+            </div>
+
+        </div>
+
+        <div class="progress-group">
+
+            <div class="progress-header">
+                <h4>Security</h4>
+                <span>90%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill security"></div>
+            </div>
+
+        </div>
+
+        <div class="progress-group">
+
+            <div class="progress-header">
+                <h4>Performance</h4>
+                <span>88%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill performance-fill"></div>
+            </div>
+
+        </div>
+
+        <div class="progress-group">
+
+            <div class="progress-header">
+                <h4>Best Practices</h4>
+                <span>0%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill practice"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="language-card">
+
+        <h2>Languages</h2>
+
+        <ul class="language-list">
+
+            <li>
+                <div class="language-name">
+                    <i class="fa-brands fa-html5"></i>
+                    <span>HTML</span>
+                </div>
+                <span class="language-score">98%</span>
+            </li>
+
+            <li>
+                <div class="language-name">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <span>CSS</span>
+                </div>
+                <span class="language-score">96%</span>
+            </li>
+
+            <li>
+                <div class="language-name">
+                    <i class="fa-brands fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <span class="language-score">93%</span>
+            </li>
+
+            <li>
+                <div class="language-name">
+                    <i class="fa-brands fa-php"></i>
+                    <span>PHP</span>
+                </div>
+                <span class="language-score">90%</span>
+            </li>
+
+            <li>
+                <div class="language-name">
+                    <i class="fa-brands fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <span class="language-score">94%</span>
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!--======================================
+            FOOTER
+=======================================-->
+
+<footer class="dashboard-footer">
+
+    <p>
+
+        Â© 2026 <strong>AI Code Review Assistant</strong> |
+        Powered by Artificial Intelligence |
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/app-shell.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

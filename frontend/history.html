@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>History | AI Code Review Assistant</title>
+    <link rel="icon" type="image/svg+xml" href="assets/brand-logo.svg">
+    <link rel="apple-touch-icon" href="assets/brand-logo.svg">
+
+    <meta name="description"
+        content="AI Code Review Assistant - View Your Code Review History">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="css/app-shell.css">
+
+</head>
+
+<body>
+
+    <!--======================================
+                SIDEBAR
+    =======================================-->
+
+    <aside class="sidebar">
+
+        <a href="dashboard.html" class="logo">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>AI Code Review Assistant</span>
+
+        </a>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="review.html">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Review Code</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="report.html">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>Reports</span>
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="history.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>History</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html" class="logout-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!--======================================
+                MAIN CONTENT
+    =======================================-->
+
+    <main class="main-content">
+
+        <!--==================================
+                TOP NAVBAR
+        ===================================-->
+
+        <header class="top-navbar">
+
+            <div class="page-title">
+
+                <h1>Review History</h1>
+
+                <p>Track and revisit your past code reviews.</p>
+
+            </div>
+
+            <div class="top-right">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text"
+                        placeholder="Search history...">
+
+                </div>
+
+                
+                <div class="profile-box">
+
+                    <img src="assets/user-avatar.svg" alt="User">
+
+                    <div>
+
+                        <h4>Account</h4>
+
+                        <span>Account</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!--==================================
+                HISTORY STATS
+        ===================================-->
+
+        <section class="history-stats">
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+
+                        <i class="fa-solid fa-code"></i>
+
+                    </div>
+
+                    <div class="stat-info">
+
+                        <h3>Total Reviews</h3>
+
+                        <h2>156</h2>
+
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                    </div>
+
+                    <div class="stat-info">
+
+                        <h3>This Week</h3>
+
+                        <h2>12</h2>
+
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                    </div>
+
+                    <div class="stat-info">
+
+                        <h3>This Month</h3>
+
+                        <h2>48</h2>
+
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+
+                        <i class="fa-solid fa-trophy"></i>
+
+                    </div>
+
+                    <div class="stat-info">
+
+                        <h3>Best Score</h3>
+
+                        <h2>98%</h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--==================================
+                FILTERS
+        ===================================-->
+
+        <section class="history-filters">
+
+            <div class="filter-group">
+
+                <button class="filter-chip active">
+
+                    <i class="fa-solid fa-list"></i>
+
+                    All Reviews
+
+                </button>
+
+                <button class="filter-chip">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    High Scores
+
+                </button>
+
+                <button class="filter-chip">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    Needs Improvement
+
+                </button>
+
+                <button class="filter-chip">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Security Issues
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!--==================================
+                HISTORY TIMELINE
+        ===================================-->
+
+        <section class="history-timeline">
+
+            <div class="timeline-header">
+
+                <h2>Recent Activity</h2>
+
+                <div class="view-toggle">
+
+                    <button class="view-btn active" title="List View">
+
+                        <i class="fa-solid fa-list"></i>
+
+                    </button>
+
+                    <button class="view-btn" title="Timeline View">
+
+                        <i class="fa-solid fa-stream"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-list">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-marker">
+
+                        <div class="marker-dot"></div>
+
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <div class="timeline-card">
+
+                            <div class="timeline-header-info">
+
+                                <div class="timeline-icon">
+
+                                    <i class="fa-solid fa-file-code"></i>
+
+                                </div>
+
+                                <div class="timeline-details">
+
+                                    <h4>E-commerce Platform Review</h4>
+
+                                    <p>JavaScript • React • Node.js</p>
+
+                                </div>
+
+                                <div class="timeline-score">
+
+                                    <span class="score-badge excellent">95%</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="timeline-meta">
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-clock"></i>
+
+                                    2 hours ago
+
+                                </span>
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-user"></i>
+
+                                    Account
+
+                                </span>
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-shield-halved"></i>
+
+                                    Security: 98%
+
+                                </span>
+
+                            </div>
+
+                            <div class="timeline-actions">
+
+                                <button class="timeline-btn view-btn" title="View Details">
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                    View
+
+                                </button>
+
+                                <button class="timeline-btn download-btn" title="Download Report">
+
+                                    <i class="fa-solid fa-download"></i>
+
+                                    Download
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-marker">
+
+                        <div class="marker-dot"></div>
+
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <div class="timeline-card">
+
+                            <div class="timeline-header-info">
+
+                                <div class="timeline-icon">
+
+                                    <i class="fa-solid fa-file-code"></i>
+
+                                </div>
+
+                                <div class="timeline-details">
+
+                                    <h4>API Authentication System</h4>
+
+                                    <p>Python • Django • PostgreSQL</p>
+
+                                </div>
+
+                                <div class="timeline-score">
+
+                                    <span class="score-badge good">88%</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="timeline-meta">
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-clock"></i>
+
+                                    5 hours ago
+
+                                </span>
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-user"></i>
+
+                                    Account
+
+                                </span>
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-shield-halved"></i>
+
+                                    Security: 92%
+
+                                </span>
+
+                            </div>
+
+                            <div class="timeline-actions">
+
+                                <button class="timeline-btn view-btn" title="View Details">
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                    View
+
+                                </button>
+
+                                <button class="timeline-btn download-btn" title="Download Report">
+
+                                    <i class="fa-solid fa-download"></i>
+
+                                    Download
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-marker">
+
+                        <div class="marker-dot warning"></div>
+
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <div class="timeline-card">
+
+                            <div class="timeline-header-info">
+
+                                <div class="timeline-icon warning">
+
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                                </div>
+
+                                <div class="timeline-details">
+
+                                    <h4>Data Processing Pipeline</h4>
+
+                                    <p>Python • Pandas • Apache Spark</p>
+
+                                </div>
+
+                                <div class="timeline-score">
+
+                                    <span class="score-badge warning">76%</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="timeline-meta">
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-clock"></i>
+
+                                    1 day ago
+
+                                </span>
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-user"></i>
+
+                                    Account
+
+                                </span>
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-shield-halved"></i>
+
+                                    Security: 82%
+
+                                </span>
+
+                            </div>
+
+                            <div class="timeline-actions">
+
+                                <button class="timeline-btn view-btn" title="View Details">
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                    View
+
+                                </button>
+
+                                <button class="timeline-btn download-btn" title="Download Report">
+
+                                    <i class="fa-solid fa-download"></i>
+
+                                    Download
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-marker">
+
+                        <div class="marker-dot"></div>
+
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <div class="timeline-card">
+
+                            <div class="timeline-header-info">
+
+                                <div class="timeline-icon">
+
+                                    <i class="fa-solid fa-file-code"></i>
+
+                                </div>
+
+                                <div class="timeline-details">
+
+                                    <h4>Mobile App Backend</h4>
+
+                                    <p>Java • Spring Boot • MySQL</p>
+
+                                </div>
+
+                                <div class="timeline-score">
+
+                                    <span class="score-badge excellent">92%</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="timeline-meta">
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-clock"></i>
+
+                                    2 days ago
+
+                                </span>
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-user"></i>
+
+                                    Account
+
+                                </span>
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-shield-halved"></i>
+
+                                    Security: 95%
+
+                                </span>
+
+                            </div>
+
+                            <div class="timeline-actions">
+
+                                <button class="timeline-btn view-btn" title="View Details">
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                    View
+
+                                </button>
+
+                                <button class="timeline-btn download-btn" title="Download Report">
+
+                                    <i class="fa-solid fa-download"></i>
+
+                                    Download
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-marker">
+
+                        <div class="marker-dot"></div>
+
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <div class="timeline-card">
+
+                            <div class="timeline-header-info">
+
+                                <div class="timeline-icon">
+
+                                    <i class="fa-solid fa-file-code"></i>
+
+                                </div>
+
+                                <div class="timeline-details">
+
+                                    <h4>REST API Service</h4>
+
+                                    <p>C# • ASP.NET Core • SQL Server</p>
+
+                                </div>
+
+                                <div class="timeline-score">
+
+                                    <span class="score-badge good">85%</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="timeline-meta">
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-clock"></i>
+
+                                    3 days ago
+
+                                </span>
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-user"></i>
+
+                                    Account
+
+                                </span>
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-shield-halved"></i>
+
+                                    Security: 90%
+
+                                </span>
+
+                            </div>
+
+                            <div class="timeline-actions">
+
+                                <button class="timeline-btn view-btn" title="View Details">
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                    View
+
+                                </button>
+
+                                <button class="timeline-btn download-btn" title="Download Report">
+
+                                    <i class="fa-solid fa-download"></i>
+
+                                    Download
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-marker">
+
+                        <div class="marker-dot excellent"></div>
+
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <div class="timeline-card">
+
+                            <div class="timeline-header-info">
+
+                                <div class="timeline-icon excellent">
+
+                                    <i class="fa-solid fa-trophy"></i>
+
+                                </div>
+
+                                <div class="timeline-details">
+
+                                    <h4>Frontend Dashboard</h4>
+
+                                    <p>HTML • CSS • JavaScript</p>
+
+                                </div>
+
+                                <div class="timeline-score">
+
+                                    <span class="score-badge excellent">97%</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="timeline-meta">
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-clock"></i>
+
+                                    1 week ago
+
+                                </span>
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-user"></i>
+
+                                    Account
+
+                                </span>
+
+                                <span class="meta-item">
+
+                                    <i class="fa-solid fa-shield-halved"></i>
+
+                                    Security: 99%
+
+                                </span>
+
+                            </div>
+
+                            <div class="timeline-actions">
+
+                                <button class="timeline-btn view-btn" title="View Details">
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                    View
+
+                                </button>
+
+                                <button class="timeline-btn download-btn" title="Download Report">
+
+                                    <i class="fa-solid fa-download"></i>
+
+                                    Download
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--==================================
+                LOAD MORE
+        ===================================-->
+
+        <section class="load-more">
+
+            <button class="load-more-btn">
+
+                <i class="fa-solid fa-arrow-down"></i>
+
+                Load More History
+
+            </button>
+
+        </section>
+
+        <!--======================================
+                FOOTER
+        =======================================-->
+
+        <footer class="history-footer">
+
+            <div class="footer-content">
+
+                <div class="footer-left">
+
+                    <h3>AI Code Review Assistant</h3>
+
+                    <p>
+                        Professional AI-powered platform for code quality,
+                        security analysis, performance optimization,
+                        and best practice recommendations.
+                    </p>
+
+                </div>
+
+                <div class="footer-right">
+
+                    <p>
+
+                        © 2026 AI Code Review Assistant.
+
+                        
+                    </p>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+    <!--======================================
+            JAVASCRIPT
+    =======================================-->
+
+    <script src="js/api.js"></script>
+    <script src="js/app-shell.js"></script>
+    <script src="js/history.js"></script>
+</body>
+
+</html>

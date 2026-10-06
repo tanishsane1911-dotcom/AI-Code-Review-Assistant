@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | AI Code Review Assistant</title>
+    <link rel="icon" type="image/svg+xml" href="assets/brand-logo.svg">
+    <link rel="apple-touch-icon" href="assets/brand-logo.svg">
+
+    <meta name="description"
+        content="Create your AI Code Review Assistant account">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+    <link rel="stylesheet"
+        href="css/signup.css">
+
+</head>
+
+<body>
+
+<!--==========================
+        BACKGROUND
+===========================-->
+
+<div class="signup-background">
+
+    <div class="circle circle1"></div>
+
+    <div class="circle circle2"></div>
+
+    <div class="circle circle3"></div>
+
+    <div class="grid-overlay"></div>
+
+</div>
+
+<!--==========================
+        SIGNUP SECTION
+===========================-->
+
+<section class="signup-section">
+
+<div class="signup-container">
+
+<!--==========================
+        LEFT PANEL
+===========================-->
+
+<div class="signup-left">
+<div class="signup-content">
+  <h3>
+
+               
+               <img class="auth-brand-logo" src="assets/brand-logo.svg" alt="AI Code Review Assistant" width="34" height="34">
+
+                AI Code Review Assistant
+
+            </h3>
+
+<span class="badge">
+
+<i class="fas fa-user-plus"></i>
+<div class="card-header"></div>
+Create Your Account
+</span>
+
+<h1>
+
+Join AI Code Review
+
+</h1>
+
+<p>
+
+Create your account and unlock AI-powered code reviews,
+security analysis, smart suggestions, and professional reports.
+
+</p>
+
+</div>
+
+<div class="features-list">
+
+<div class="feature-item">
+
+<i class="fas fa-check-circle"></i>
+
+Unlimited Code Reviews
+
+</div>
+
+<div class="feature-item">
+
+<i class="fas fa-check-circle"></i>
+
+AI Suggestions
+
+</div>
+
+<div class="feature-item">
+
+<i class="fas fa-check-circle"></i>
+
+Security Analysis
+
+</div>
+
+<div class="feature-item">
+
+<i class="fas fa-check-circle"></i>
+
+Download PDF Reports
+
+</div>
+
+<div class="feature-item">
+
+<i class="fas fa-check-circle"></i>
+
+Review History
+
+</div>
+
+<div class="feature-item">
+
+<i class="fas fa-check-circle"></i>
+
+Profile Dashboard
+
+</div>
+
+</div>
+
+</div>
+
+<!--==========================
+        RIGHT PANEL
+===========================-->
+
+<div class="signup-right">
+
+<div class="signup-card">
+
+<div class="card-header">
+
+<h2>Create Account</h2>
+
+<p>
+
+Fill in your information to get started.
+
+</p>
+
+</div>
+
+<form class="signup-form" autocomplete="off" novalidate>
+    <!--======================================
+        FULL NAME
+=======================================-->
+
+<div class="input-group">
+
+    <label>Full Name</label>
+
+    <div class="input-box">
+
+        <i class="fa-solid fa-user"></i>
+
+        <input
+            type="text"
+            name="fullname"
+            autocomplete="off"
+            placeholder="Enter your full name"
+            required>
+
+    </div>
+
+</div>
+
+
+
+<!--======================================
+        USERNAME
+=======================================-->
+
+<div class="input-group">
+
+    <label>Username</label>
+
+    <div class="input-box">
+
+        <i class="fa-solid fa-at"></i>
+
+        <input
+            type="text"
+            name="username"
+            autocomplete="username"
+            placeholder="Choose a username"
+            required>
+
+    </div>
+
+</div>
+
+
+
+<!--======================================
+        EMAIL
+=======================================-->
+
+<div class="input-group">
+
+    <label>Email Address</label>
+
+    <div class="input-box">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        <input
+            type="email"
+            name="email"
+            autocomplete="off"
+            placeholder="Enter your email"
+            required>
+
+    </div>
+
+</div>
+
+
+<!--======================================
+        PASSWORD
+=======================================-->
+
+<div class="input-group">
+
+    <label>Password</label>
+
+    <div class="input-box">
+
+        <i class="fa-solid fa-lock"></i>
+
+        <input
+            type="password"
+            id="password"
+            name="password"
+            autocomplete="new-password"
+            placeholder="Create a password"
+            required>
+
+        <i class="fa-solid fa-eye toggle-password"></i>
+
+    </div>
+
+</div>
+
+
+<!--======================================
+        CONFIRM PASSWORD
+=======================================-->
+
+<div class="input-group">
+
+    <label>Confirm Password</label>
+
+    <div class="input-box">
+
+        <i class="fa-solid fa-lock"></i>
+
+        <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            autocomplete="new-password"
+            placeholder="Confirm your password"
+            required>
+
+        <i class="fa-solid fa-eye toggle-confirm-password"></i>
+
+    </div>
+
+</div>
+
+
+<!--======================================
+        TERMS & CONDITIONS
+=======================================-->
+
+<div class="signup-options">
+
+    <label class="remember">
+
+        <input type="checkbox" required>
+
+        I agree to the
+
+        <a href="terms.html">
+
+            Terms & Conditions
+
+        </a>
+
+    </label>
+
+</div>
+
+<p class="form-status" role="alert" aria-live="polite" hidden></p>
+
+
+<!--======================================
+        SIGNUP BUTTON
+=======================================-->
+
+<button
+    type="submit"
+    class="signup-btn">
+
+    <i class="fa-solid fa-user-plus"></i>
+
+    Create Account
+
+</button>
+
+
+<!--======================================
+        DIVIDER
+=======================================-->
+
+<div class="divider">
+
+    <span>
+
+        OR
+
+    </span>
+
+</div>
+
+
+
+<!--======================================
+              LOGIN LINK
+=======================================-->
+
+<div class="login-link">
+
+    <p>
+
+        Already have an account?
+
+        <a href="login.html">
+
+            Sign In
+
+        </a>
+
+    </p>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!--======================================
+        JAVASCRIPT
+=======================================-->
+
+<script src="js/api.js"></script>
+<script src="js/signup.js"></script>
+
+</body>
+
+</html>

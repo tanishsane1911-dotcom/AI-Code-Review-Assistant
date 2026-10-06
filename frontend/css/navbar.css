@@ -1,0 +1,388 @@
+/* ==========================================
+            NAVBAR
+========================================== */
+
+.header{
+
+    position:fixed;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:96%;
+    max-width:1450px;
+
+    z-index:999;
+
+}
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 35px;
+
+    background:rgba(14,18,35,.78);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================
+                LOGO
+========================================== */
+
+/*=============================
+        PROFESSIONAL LOGO
+==============================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    text-decoration:none;
+
+}
+
+/* Logo Box */
+
+.logo-icon{
+
+    width:50px;
+
+    height:50px;
+
+    background:linear-gradient(135deg,#5B5CFF,#9F44FF);
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    box-shadow:
+    0 12px 30px rgba(108,99,255,.35),
+    inset 0 1px 0 rgba(255,255,255,.15);
+
+    transition:.35s;
+
+}
+
+.logo-icon:hover{
+
+    transform:translateY(-4px) rotate(-6deg);
+
+    box-shadow:
+    0 20px 40px rgba(108,99,255,.45);
+
+}
+
+/* Inner Circle */
+
+.logo-inner{
+
+    width:48px;
+
+    height:48px;
+
+    border:2px solid rgba(255,255,255,.18);
+
+    border-radius:14px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    backdrop-filter:blur(8px);
+
+}
+
+/* </> */
+
+.logo-inner span{
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    font-family:monospace;
+
+}
+
+/* Text */
+
+.logo-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.logo-text h2{
+
+    color:#ffffff;
+
+    font-size:30px;
+
+    font-weight:1000;
+
+    line-height:1;
+
+    margin:0;
+
+}
+
+.logo-text p{
+
+    margin-top:4px;
+
+    color:#8B5CF6;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+/* ==========================================
+            NAVIGATION MENU
+========================================== */
+
+.nav-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+.nav-link{
+
+    position:relative;
+
+    color:var(--text);
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+    padding:8px 0;
+
+}
+
+.nav-link:hover{
+
+    color:var(--white);
+
+}
+
+/* Underline Animation */
+
+.nav-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:0;
+
+    height:2px;
+
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+
+    border-radius:20px;
+
+    transition:.35s;
+
+}
+
+.nav-link:hover::after,
+
+.nav-link.active::after{
+
+    width:100%;
+
+}
+
+.nav-link.active{
+
+    color:var(--white);
+
+}
+
+/* ==========================================
+            BUTTONS
+========================================== */
+
+.nav-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.btn-login{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 24px;
+
+    color:var(--white);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+    background:transparent;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.btn-login:hover{
+
+    background:rgba(255,255,255,.08);
+
+    border-color:rgba(108,99,255,.4);
+
+    transform:translateY(-2px);
+
+}
+
+.btn-start{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 24px;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    border:none;
+
+    box-shadow:0 4px 15px rgba(108,99,255,.3);
+
+}
+
+.btn-start:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 30px rgba(108,99,255,.5);
+
+    background:linear-gradient(135deg, #7C73FF, #9F63FF);
+
+}
+
+/* ==========================================
+            MOBILE MENU
+========================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:28px;
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
+        STICKY EFFECT
+========================================== */
+
+.header.scrolled{
+
+    background:#050816;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================
+        NAVBAR ANIMATION
+========================================== */
+
+@keyframes slideDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

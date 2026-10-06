@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports | AI Code Review Assistant</title>
+    <link rel="icon" type="image/svg+xml" href="assets/brand-logo.svg">
+    <link rel="apple-touch-icon" href="assets/brand-logo.svg">
+
+    <meta name="description"
+        content="AI Code Review Assistant - View and Download Your Code Review Reports">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/report.css">
+    <link rel="stylesheet" href="css/app-shell.css">
+
+    <script src="js/api.js"></script>
+    <script src="js/app-shell.js"></script>
+    <script src="js/report.js"></script>
+</head>
+
+<body>
+
+    <!--======================================
+                SIDEBAR
+    =======================================-->
+
+    <aside class="sidebar">
+
+        <a href="dashboard.html" class="logo">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>AI Code Review Assistant</span>
+
+        </a>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="review.html">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Review Code</span>
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="report.html">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>Reports</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="history.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>History</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html" class="logout-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!--======================================
+                MAIN CONTENT
+    =======================================-->
+
+    <main class="main-content">
+
+        <!--==================================
+                TOP NAVBAR
+        ===================================-->
+
+        <header class="top-navbar">
+
+            <div class="page-title">
+
+                <h1>Reports</h1>
+
+                <p>View and manage your code review reports.</p>
+
+            </div>
+
+            <div class="top-right">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text"
+                        placeholder="Search reports...">
+
+                </div>
+
+                <button class="notification">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </button>
+
+                <div class="profile-box">
+
+                    <img src="assets/user-avatar.svg" alt="User">
+
+                    <div>
+
+                        <h4>Loading…</h4>
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!--==================================
+                REPORTS OVERVIEW
+        ===================================-->
+
+        <section class="reports-overview">
+
+            <div class="overview-cards">
+
+                <div class="overview-card">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <div class="overview-info">
+
+                        <h3>Total Reports</h3>
+
+                        <h2>—</h2>
+
+                    </div>
+
+                </div>
+
+                <div class="overview-card">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <div class="overview-info">
+
+                        <h3>This Month</h3>
+
+                        <h2>—</h2>
+
+                    </div>
+
+                </div>
+
+                <div class="overview-card">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <div class="overview-card-icon">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <div class="overview-info">
+
+                        <h3>Avg. Score</h3>
+
+                        <h2>—</h2>
+
+                    </div>
+
+                </div>
+
+                <div class="overview-card">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <div class="overview-info">
+
+                        <h3>Downloads</h3>
+
+                        <h2>Not tracked</h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--==================================
+                REPORTS LIST
+        ===================================-->
+
+        <section class="reports-section">
+
+            <div class="section-header">
+
+                <h2>Recent Reports</h2>
+
+                <button class="filter-btn">
+
+                    <i class="fa-solid fa-filter"></i>
+
+                    Filter
+
+                </button>
+
+            </div>
+
+            <div class="reports-list is-loading">
+
+                <div class="report-item">
+
+                    <div class="report-icon">
+
+                        <i class="fa-solid fa-file-code"></i>
+
+                    </div>
+
+                    <div class="report-details">
+
+                        <h4>E-commerce Platform Review</h4>
+
+                        <p>JavaScript • React • Node.js</p>
+
+                        <span class="report-date">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                            2 hours ago
+
+                        </span>
+
+                    </div>
+
+                    <div class="report-score">
+
+                        <span class="score-badge excellent">95%</span>
+
+                    </div>
+
+                    <div class="report-actions">
+
+                        <button class="action-btn view-btn" title="View Report">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="action-btn download-btn" title="Download PDF">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button class="action-btn share-btn" title="Share">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="report-item">
+
+                    <div class="report-icon">
+
+                        <i class="fa-solid fa-file-code"></i>
+
+                    </div>
+
+                    <div class="report-details">
+
+                        <h4>API Authentication System</h4>
+
+                        <p>Python • Django • PostgreSQL</p>
+
+                        <span class="report-date">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                            5 hours ago
+
+                        </span>
+
+                    </div>
+
+                    <div class="report-score">
+
+                        <span class="score-badge good">88%</span>
+
+                    </div>
+
+                    <div class="report-actions">
+
+                        <button class="action-btn view-btn" title="View Report">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="action-btn download-btn" title="Download PDF">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button class="action-btn share-btn" title="Share">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="report-item">
+
+                    <div class="report-icon">
+
+                        <i class="fa-solid fa-file-code"></i>
+
+                    </div>
+
+                    <div class="report-details">
+
+                        <h4>Mobile App Backend</h4>
+
+                        <p>Java • Spring Boot • MySQL</p>
+
+                        <span class="report-date">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                            1 day ago
+
+                        </span>
+
+                    </div>
+
+                    <div class="report-score">
+
+                        <span class="score-badge excellent">92%</span>
+
+                    </div>
+
+                    <div class="report-actions">
+
+                        <button class="action-btn view-btn" title="View Report">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="action-btn download-btn" title="Download PDF">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button class="action-btn share-btn" title="Share">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="report-item">
+
+                    <div class="report-icon">
+
+                        <i class="fa-solid fa-file-code"></i>
+
+                    </div>
+
+                    <div class="report-details">
+
+                        <h4>Data Processing Pipeline</h4>
+
+                        <p>Python • Pandas • Apache Spark</p>
+
+                        <span class="report-date">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                            2 days ago
+
+                        </span>
+
+                    </div>
+
+                    <div class="report-score">
+
+                        <span class="score-badge warning">76%</span>
+
+                    </div>
+
+                    <div class="report-actions">
+
+                        <button class="action-btn view-btn" title="View Report">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="action-btn download-btn" title="Download PDF">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button class="action-btn share-btn" title="Share">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="report-item">
+
+                    <div class="report-icon">
+
+                        <i class="fa-solid fa-file-code"></i>
+
+                    </div>
+
+                    <div class="report-details">
+
+                        <h4>REST API Service</h4>
+
+                        <p>C# • ASP.NET Core • SQL Server</p>
+
+                        <span class="report-date">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                            3 days ago
+
+                        </span>
+
+                    </div>
+
+                    <div class="report-score">
+
+                        <span class="score-badge good">85%</span>
+
+                    </div>
+
+                    <div class="report-actions">
+
+                        <button class="action-btn view-btn" title="View Report">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="action-btn download-btn" title="Download PDF">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button class="action-btn share-btn" title="Share">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+

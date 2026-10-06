@@ -1,0 +1,145 @@
+:root {
+    --page-bg: #070a10;
+    --panel-bg: rgba(15, 23, 34, .82);
+    --panel-border: rgba(148, 163, 184, .18);
+    --muted: #9aa8bb;
+    --teal: #2dd4bf;
+    --violet: #a78bfa;
+}
+
+html {
+    min-width: 320px;
+    background: var(--page-bg);
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+    background:
+        radial-gradient(circle at 14% 10%, rgba(45, 212, 191, .09), transparent 28rem),
+        radial-gradient(circle at 88% 18%, rgba(124, 58, 237, .14), transparent 30rem),
+        var(--page-bg);
+}
+
+.site-header,
+main,
+section > div,
+footer > div {
+    width: min(100% - 2rem, 80rem);
+    margin-inline: auto;
+}
+
+.site-header {
+    min-height: 5rem;
+    padding-block: 1rem;
+    border-color: var(--panel-border);
+}
+
+.site-brand,
+.auth-actions,
+nav,
+.laptop-screen,
+.feature-card,
+footer {
+    min-width: 0;
+}
+
+.site-brand-text span:first-child {
+    color: #f8fafc;
+}
+
+.auth-actions a,
+main a {
+    text-decoration: none;
+}
+
+main {
+    padding-block: clamp(3.5rem, 8vw, 7rem);
+    overflow: clip;
+}
+
+.laptop-screen {
+    width: 100%;
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .35);
+}
+
+.laptop-screen > .grid {
+    min-width: 0;
+}
+
+.laptop-screen p,
+.laptop-screen li {
+    overflow-wrap: anywhere;
+}
+
+.feature-card,
+#how-it-works .grid > div {
+    height: 100%;
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+}
+
+section {
+    scroll-margin-top: 2rem;
+}
+
+footer {
+    margin-top: 3rem;
+}
+
+@media (max-width: 1023px) {
+    .site-header {
+        width: min(100% - 2rem, 80rem);
+    }
+
+    .site-header nav {
+        display: none;
+    }
+}
+
+@media (max-width: 639px) {
+    .site-header,
+    main,
+    section > div,
+    footer > div {
+        width: min(100% - 1.5rem, 40rem);
+    }
+
+    .site-header {
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .site-brand-text span:first-child {
+        font-size: .95rem;
+    }
+
+    .auth-actions {
+        gap: .5rem;
+    }
+
+    .auth-actions a {
+        padding-inline: .75rem;
+    }
+
+    .laptop-screen {
+        padding: .75rem;
+    }
+
+    .laptop-screen > .grid > div {
+        min-width: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::before,
+    .site-header,
+    .brand-mark,
+    .laptop-screen,
+    .feature-card,
+    #how-it-works .grid > div {
+        animation: none !important;
+    }
+}
